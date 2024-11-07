@@ -55,7 +55,7 @@ const EmailCard = ({
           </CardDescription>
         </CardHeader>
         <CardFooter data-testid="email-date">
-          <p className="text-sm font-normal text-text">
+          <p className="text-sm font-normal text-text flex gap-3">
             {formatDate(email.date)}
 
             <span className="text-accent text-xs">
