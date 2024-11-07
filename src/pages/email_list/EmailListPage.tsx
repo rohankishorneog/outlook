@@ -45,7 +45,7 @@ const EmailListPage = () => {
   // Fetch emails when component mounts or page/filter changes
   useEffect(() => {
     dispatch(fetchEmails(currentPage));
-  }, [dispatch, currentPage, activeFilter]);
+  }, [dispatch, currentPage]);
 
   // Pagination controls
   const handleNextPage = () => {
