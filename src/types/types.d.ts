@@ -9,6 +9,8 @@ export interface Email {
   date: number;
   subject: string;
   short_description: string;
+  read:boolean
+  favourite:boolean
 }
 
 export interface EmailBody {
