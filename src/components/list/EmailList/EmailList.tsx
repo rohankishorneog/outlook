@@ -18,14 +18,18 @@ const EmailList = ({
         selectedMail ? "w-1/3 hidden lg:block" : "w-full"
       }`}
     >
-      {emails.map((email) => (
-        <EmailCard
-          key={email.id}
-          email={email}
-          handleSelectEmail={handleSelectEmail}
-          selectedMail={selectedMail}
-        />
-      ))}
+      {emails.length === 0 ? (
+        <li className="text-center text-gray-500 mt-4">No emails found</li>
+      ) : (
+        emails.map((email) => (
+          <EmailCard
+            key={email.id}
+            email={email}
+            handleSelectEmail={handleSelectEmail}
+            selectedMail={selectedMail}
+          />
+        ))
+      )}
     </ul>
   );
 };
