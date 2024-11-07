@@ -101,25 +101,27 @@ const EmailListPage = () => {
       </div>
 
       {/* Pagination Controls */}
-      <div className="flex justify-center mt-5">
-        <button
-          onClick={handlePreviousPage}
-          disabled={currentPage === 1}
-          className="px-4 py-2 mx-2 text-sm bg-gray-200 rounded"
-        >
-          Previous
-        </button>
-        <span className="text-sm font-medium">
-          Page {currentPage} of {2}
-        </span>
-        <button
-          onClick={handleNextPage}
-          disabled={currentPage === 2}
-          className="px-4 py-2 mx-2 text-sm bg-gray-200 rounded"
-        >
-          Next
-        </button>
-      </div>
+      {activeFilter === "all" && (
+        <div className="flex justify-center mt-5 items-center">
+          <button
+            onClick={handlePreviousPage}
+            disabled={currentPage === 1}
+            className="px-4 py-2 mx-2 text-sm bg-gray-200 rounded"
+          >
+            Previous
+          </button>
+          <span className="text-sm font-medium">
+            Page {currentPage} of {2}
+          </span>
+          <button
+            onClick={handleNextPage}
+            disabled={currentPage === 2}
+            className="px-4 py-2 mx-2 text-sm bg-gray-200 rounded"
+          >
+            Next
+          </button>
+        </div>
+      )}
     </main>
   );
 };
